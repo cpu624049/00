@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bottom Sheet Example</title>
+<link rel="stylesheet" href="gpt04.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+</head>
+<body>
+<button id="modalButton" class="modal_button">Modal</button>
+<div id="bottomSheet" class="bottom_sheet">
+    <div class="modal_header">
+        <div class="modal_header_title">톡상담</div>
+        <button id="closeButton" class="close_button"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="chat_content_sheet">
+        <div class="chat_content_msg">안녕하세요</div>
+        <script>
+            for(i=0;i<10;i++){
+                document.write("<div class='chat_content_question'>무요"+i+"</div>"
+                +"<div class='chat_content_answer'>올바르지 않은 질문입니다"+i+"</div>");
+            }
+        </script>
+    </div>
+  <!-- Content of the bottom sheet goes here -->
+</div>
+<script src="gpt04.js"></script>
+</body>
+</html>

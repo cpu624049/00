@@ -1,0 +1,165 @@
+.modal_button {
+    position: fixed;
+    bottom: 4%;
+    right: 4%;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1001;
+    /* Ensure button is above bottom sheet */
+}
+
+.bottom_sheet {
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    width: 300px;
+    /* Initial width of the bottom sheet */
+    height: 200px;
+    /* Initial height of the bottom sheet */
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    /* Transition for smooth animation */
+    z-index: 1000;
+    /* Ensure bottom sheet is above other content */
+    display: none;
+}
+
+.modal_header {
+    position: relative;
+    top: 2%;
+    width: 100%;
+}
+
+.modal_header_title {
+    display: inline-block;
+    margin-left: 3%;
+    margin-top: 1%;
+    width: 250px;
+    height: 25px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 1001;
+}
+
+.close_button {
+    display: inline-block;
+    margin-left: 2%;
+    transform: translateY(-1px);
+    width: 25px;
+    height: 25px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    background-color: #007bff;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.close_button:active {
+    background-color: red;
+}
+
+.chat_content_sheet {
+    position: relative;
+    top: 5%;
+    left: 4.7%;
+    width: 280px;
+    /* Initial width of the bottom sheet */
+    height: 360px;
+    /* Initial height of the bottom sheet */
+    background-color: #007bff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    /* Transition for smooth animation */
+    z-index: 1001;
+    /* Ensure bottom sheet is above other content */
+    overflow-y: auto;
+}
+
+.chat_content_msg {
+    position: relative;
+    width: 70%;
+    min-height: 50px;
+    background: lightyellow;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    top: 10px;
+    left: 20px;
+}
+
+.chat_content_msg:after {
+    border-top: 15px solid lightyellow;
+    border-left: 15px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -15px;
+}
+
+.chat_content_question {
+    margin-top: 10px;
+    position: relative;
+    width: 70%;
+    min-height: 50px;
+    background: lightyellow;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    top: 10px;
+    left: 60px;
+}
+
+.chat_content_question:after {
+    border-top: 15px solid lightyellow;
+    border-left: 0px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 0px solid transparent;
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: -14px;
+}
+
+.chat_content_answer {
+    margin-top: 10px;
+    position: relative;
+    width: 70%;
+    min-height: 50px;
+    background: lightyellow;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    top: 10px;
+    left: 20px;
+}
+
+.chat_content_answer:after {
+    border-top: 15px solid lightyellow;
+    border-left: 15px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -15px;
+}
+
+.expanded {
+    display: block;
+    width: 20%;
+    /* Change to desired width when expanded */
+    height: 60%;
+    /* Change to desired height when expanded */
+}
