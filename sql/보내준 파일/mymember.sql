@@ -1,0 +1,161 @@
+--------------------------------------------------------
+--  파일이 생성됨 - 금요일-4월-12-2024   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table MY_MEMBER_INFO
+--------------------------------------------------------
+
+  CREATE TABLE "IBARA"."MY_MEMBER_INFO" 
+   (	"MEMNO" NUMBER, 
+	"NICKNAME" VARCHAR2(50 BYTE), 
+	"SHPWD" VARCHAR2(90 BYTE), 
+	"BCPWD" VARCHAR2(90 BYTE), 
+	"EMAIL" VARCHAR2(50 BYTE), 
+	"MAILCHECK" NUMBER, 
+	"BIRTH" VARCHAR2(8 BYTE), 
+	"GENDER" VARCHAR2(10 BYTE), 
+	"PHONE" VARCHAR2(15 BYTE), 
+	"JOINDATE" TIMESTAMP (6), 
+	"MEMTYPE" VARCHAR2(15 BYTE), 
+	"PROFILEIMG" VARCHAR2(300 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table MY_INTERIOR
+--------------------------------------------------------
+
+  CREATE TABLE "IBARA"."MY_INTERIOR" 
+   (	"INTENO" NUMBER, 
+	"MEMNO" NUMBER, 
+	"INTERIORNUM" NUMBER
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table MY_REPORT
+--------------------------------------------------------
+
+  CREATE TABLE "IBARA"."MY_REPORT" 
+   (	"RENO" NUMBER, 
+	"TARGETNO" NUMBER, 
+	"TARGETTYPE" VARCHAR2(30 BYTE), 
+	"MEMNO" NUMBER, 
+	"TARGETMEMNO" NUMBER, 
+	"CAUSE" VARCHAR2(100 BYTE), 
+	"REDATE" TIMESTAMP (6), 
+	"YESNO" VARCHAR2(3 BYTE) DEFAULT 'N'
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table MY_SELLER
+--------------------------------------------------------
+
+  CREATE TABLE "IBARA"."MY_SELLER" 
+   (	"SELLERNO" NUMBER, 
+	"MEMNO" NUMBER, 
+	"SELLERNUM" NUMBER
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+--------------------------------------------------------
+--  DDL for Table MY_WITHDRAWAL
+--------------------------------------------------------
+
+  CREATE TABLE "IBARA"."MY_WITHDRAWAL" 
+   (	"WDNO" NUMBER, 
+	"MEMNO" NUMBER, 
+	"WDDATE" TIMESTAMP (6), 
+	"REASON" VARCHAR2(130 BYTE), 
+	"YESNO" VARCHAR2(3 BYTE) DEFAULT 'N'
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "SYSTEM" ;
+
+
+
+
+--------------------------------------------------------
+--  파일이 생성됨 - 금요일-4월-12-2024   
+--------------------------------------------------------
+REM INSERTING into MY_MEMBER_INFO
+SET DEFINE OFF;
+Insert into MY_MEMBER_INFO (MEMNO,NICKNAME,SHPWD,BCPWD,EMAIL,MAILCHECK,BIRTH,GENDER,PHONE,JOINDATE,MEMTYPE,PROFILEIMG) values (1001,'호호','c1V5p7bjUgxsam+O7Sd1Mag5AOTE+B/QGQ2sBHwsxcab4iqF4rxC2Pj1kEEQM/mi32JUq+g6skNYIO7KQA5cOg==','qx13bnXk+QS5lRPoLH8+Mg==','amine1225@gmail.com',1,null,'notCheck',null,to_timestamp('24/03/25 14:36:44.407000000','RR/MM/DD HH24:MI:SSXFF'),'PERSON','1711437904806_car1.png');
+Insert into MY_MEMBER_INFO (MEMNO,NICKNAME,SHPWD,BCPWD,EMAIL,MAILCHECK,BIRTH,GENDER,PHONE,JOINDATE,MEMTYPE,PROFILEIMG) values (8,'내가판매왕','c1V5p7bjUgxsam+O7Sd1Mag5AOTE+B/QGQ2sBHwsxcab4iqF4rxC2Pj1kEEQM/mi32JUq+g6skNYIO7KQA5cOg==','qx13bnXk+QS5lRPoLH8+Mg==','abc@naver.com',1,null,null,null,to_timestamp('24/04/05 10:38:22.665000000','RR/MM/DD HH24:MI:SSXFF'),'SELLER','1712281241491_heart.png');
+Insert into MY_MEMBER_INFO (MEMNO,NICKNAME,SHPWD,BCPWD,EMAIL,MAILCHECK,BIRTH,GENDER,PHONE,JOINDATE,MEMTYPE,PROFILEIMG) values (1,'admin','c1V5p7bjUgxsam+O7Sd1Mag5AOTE+B/QGQ2sBHwsxcab4iqF4rxC2Pj1kEEQM/mi32JUq+g6skNYIO7KQA5cOg==','qx13bnXk+QS5lRPoLH8+Mg==','admin',1,'20240320','notCheck','01012341234',to_timestamp('24/03/27 09:53:52.366000000','RR/MM/DD HH24:MI:SSXFF'),'ADMIN','1712906557342_hla.png');
+Insert into MY_MEMBER_INFO (MEMNO,NICKNAME,SHPWD,BCPWD,EMAIL,MAILCHECK,BIRTH,GENDER,PHONE,JOINDATE,MEMTYPE,PROFILEIMG) values (3,'smsm','c1V5p7bjUgxsam+O7Sd1Mag5AOTE+B/QGQ2sBHwsxcab4iqF4rxC2Pj1kEEQM/mi32JUq+g6skNYIO7KQA5cOg==','qx13bnXk+QS5lRPoLH8+Mg==','smdragon@naver.com',1,'20231212','notCheck','01012345678',to_timestamp('24/03/28 14:15:54.360000000','RR/MM/DD HH24:MI:SSXFF'),'INTERIOR','1712647765373_ia.png');
+Insert into MY_MEMBER_INFO (MEMNO,NICKNAME,SHPWD,BCPWD,EMAIL,MAILCHECK,BIRTH,GENDER,PHONE,JOINDATE,MEMTYPE,PROFILEIMG) values (32,'sksk','c1V5p7bjUgxsam+O7Sd1Mag5AOTE+B/QGQ2sBHwsxcab4iqF4rxC2Pj1kEEQM/mi32JUq+g6skNYIO7KQA5cOg==','qx13bnXk+QS5lRPoLH8+Mg==','sm_dragon@naver.com',1,'20240101','notCheck','01022224444',to_timestamp('24/04/11 18:16:25.273000000','RR/MM/DD HH24:MI:SSXFF'),'PERSON','1712836305330_바오바오.PNG');
+Insert into MY_MEMBER_INFO (MEMNO,NICKNAME,SHPWD,BCPWD,EMAIL,MAILCHECK,BIRTH,GENDER,PHONE,JOINDATE,MEMTYPE,PROFILEIMG) values (27,'sksksk','c1V5p7bjUgxsam+O7Sd1Mag5AOTE+B/QGQ2sBHwsxcab4iqF4rxC2Pj1kEEQM/mi32JUq+g6skNYIO7KQA5cOg==','qx13bnXk+QS5lRPoLH8+Mg==','sksksk@naver.com',1,null,null,null,to_timestamp('24/03/28 14:15:54.360000000','RR/MM/DD HH24:MI:SSXFF'),'PERSON','1712906424027_540692_196978_153.jpg');
+REM INSERTING into MY_INTERIOR
+SET DEFINE OFF;
+Insert into MY_INTERIOR (INTENO,MEMNO,INTERIORNUM) values (19,3,'1234567890');
+REM INSERTING into MY_REPORT
+SET DEFINE OFF;
+Insert into MY_REPORT (RENO,TARGETNO,TARGETTYPE,MEMNO,TARGETMEMNO,CAUSE,REDATE,YESNO) values (1,100,'BIZ_RV',1001,27,'스팸',to_timestamp('24/04/09 18:42:53.000000000','RR/MM/DD HH24:MI:SSXFF'),'N');
+Insert into MY_REPORT (RENO,TARGETNO,TARGETTYPE,MEMNO,TARGETMEMNO,CAUSE,REDATE,YESNO) values (2,5,'BIZ_RV',1001,1,'사행성조장',to_timestamp('24/04/10 10:45:45.000000000','RR/MM/DD HH24:MI:SSXFF'),'N');
+REM INSERTING into MY_SELLER
+SET DEFINE OFF;
+Insert into MY_SELLER (SELLERNO,MEMNO,SELLERNUM) values (5,8,'1112233333');
+REM INSERTING into MY_WITHDRAWAL
+SET DEFINE OFF;
+Insert into MY_WITHDRAWAL (WDNO,MEMNO,WDDATE,REASON,YESNO) values (1,1001,to_timestamp('24/03/27 15:31:01.354000000','RR/MM/DD HH24:MI:SSXFF'),'재가입','N');
+
+--현재 MY_MEMBER_INFO 테이블에 저장된 모든 멤버의 비밀번호는 abcde12345!!!!! 입니다. 암호화되서 저장되어있으니 모두 저걸로 복사해넣으시면 됩니다 ㅎㅎㅎ 
+-- 아니면 직접 이메인인증해서 가입하시는 방법도? ㅎㅎㅎ
+--MY_MEMBER_INFO 테이블에서 생일, 성별, 폰번호, PROFILEIMG은 비워두셔도 됩니다. 가입할때 받지않는 정보이며 나중에 회원정보수정에서 변경 가능합니다.
+--정보 넣으시려면 생일은 날짜타입8자리숫자, 폰번호는 10~11자리숫자,
+--PROFILEIMG는 프로필사진을 넣을때 현재시간정보가 들어간 파일명으로 rename하게 되어있어서 "resources\\upload\\my"루트에 있는 파일명을 넣어주셔야지 반영됩니다 ㅎㅎ
+
+--멤버타입은 관리자는 "ADMIN"(1명밖에 없습니다.) 개인회원은 "PERSON" 탈퇴승인된 회원은 "WITHDRAWAL" 인테리어 업체 회원은 "INTERIOR" 판매자회원은 "SELLER"
+--이메인인증이 안된 회원은 MAILCHECK가 0 이고 멤버타입이 "NOTMAILCHECK"입니다. 메일인증이 되면 MAILCHECK 이 1이 되고 개인회원이 되므로
+--"NOTMAILCHECK"인 회원이 아닌 모든 회원의 MAILCHECK는 1입니다.
+
+--인테리어업체회원은 MY_INTERIOR 테이블에 각각 똑같은 memno를 가진 데이터가 필요합니다. INTERIORNUM은 인테리어업체의 사업자등록번호로 10자리 숫자만 중복되지 않게 넣어주세요
+--INTERIOR 멤버타입의 회원이 로그인하면 MY_MEMBER_INFO 테이블과 MY_INTERIOR 정보를 memno를 기준으로 조인해서 세션에 DTO로 담습니다.  
+--여기에있는 inteno 가 성민님의 인테리어 업체에 사용됩니다.
+
+--판매자회원은 MY_SELLER 테이블에 똑같은 멤버넘버를 가진 데이터가 필요합니다. SELLERNUM은 판매업체의 사업자등록번호로 10자리 숫자만 중복되지 않게 넣어주세요
+--SELLER타입도 마찬가지로 SELLER타입의 회원이 로그인하면 MY_MEMBER_INFO 테이블과 MY_SELLER테이블을 memno를 기준으로 조인해서 세션에 DTO로 담습니다.
+
+
+--MY_WITHDRAWAL테이블에는 memno만 MY_MEMBER_INFO 테이블의 memno로 매칭해서 아무거나 넣어주시면 됩니다. 되도록 개인회원의 memno만 넣어주세요
+--(관리자페이지에서 조회되면서 탈퇴시킬지 복구시킬지 결정하게 되는데 업체가 탈퇴신청하면 나중에 번거로워져요 ㅎ) 
+--탈퇴후에 복구하면 개인회원이 되서 그렇습니다 ㅎㅎ 업체회원의 재승인과정은 아직 넣지않았습니다.
+
+
+--MY_REPORT 테이블은 신고당한 글에대한 정보를 담고있습니다.
+--targetno는 성민님의 BIZ_RV_REPORTED 테이블의 br_no와 같은 값이어야됩니다. 두 테이블을 조인해서 사용합니다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
